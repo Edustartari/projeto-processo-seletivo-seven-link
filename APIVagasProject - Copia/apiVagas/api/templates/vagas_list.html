@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <table class="table" border="1px">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Descrição</th>
+          <th>Salário</th>
+          <th>Tipo de contrato</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      {% for item in listagem %}
+        <tr>
+          <td>{{ item.titulo }}</td>
+          <td>{{ item.descricao }}</td>
+          <td>{{ item.salario }}</td>
+          <td>{{ item.tipo_contrato }}</td>
+        </tr>
+      {% endfor %}
+
+      </tbody>
+    </table>
+
+{% endblock %}
